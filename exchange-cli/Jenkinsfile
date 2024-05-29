@@ -27,5 +27,12 @@ pipeline {
                 }
             }
         }
+        stage ('Functional Tests') {
+            steps {
+                dir ('excgange-cli') {
+                    sh "npm run test:functional"
+                }
+            }
+        }
     }
 }

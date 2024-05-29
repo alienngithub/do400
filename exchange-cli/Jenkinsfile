@@ -2,7 +2,9 @@ pipeline {
     agent {
         label 'nodejs'
     }
-
+    tools {
+        nodejs "nodejs"
+    }
     stages {
         stage ('Install Dependencies') {
             steps {
